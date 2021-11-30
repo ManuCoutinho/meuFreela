@@ -1,18 +1,32 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { api } from '../../services/api';
+import { toast } from 'react-toastify';
 import { Button } from '../Button';
 import { Input } from '../Input';
-import { toast } from 'react-toastify';
 import styles from './styles.module.scss';
 
 
 export function Contacts() {
-   const[valueName, setValueName] = useState("");
-   const[valueTel, setValueTel] = useState("");
+   useEffect(() => {
+      api.get('form').then(response => console.log(response.data))
+   }, [])
 
-   
-   function handleOnInput() {      
+   const[valueName, setValueName] = useState("");
+   const[valueTel, setValueTel] = useState("");   
+   function handleOnInput(e) { 
+     e.preventDefault();
       if (valueName !== "" && valueTel !== "" && valueTel.length >= 11) {         
-         console.log({valueTel, valueName})
+         //console.log({valueTel, valueName})
+         toast.success("Aguarde nosso contato!", {
+            position: "bottom-right",
+            autoClose: 4000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: false,
+            progress: undefined,
+            theme: "colored",            
+         });
       } else {
          toast.error ("Preencha todos os campos", {
             position: "bottom-right",
@@ -28,13 +42,13 @@ export function Contacts() {
    }
   
    return (
-      <section className={styles.container} id="contacts"> 
+      <section className={styles.container} id="contacts-section"> 
          <div>
             <h2>Mande um oi, ligamos para você!</h2>
             <p>Preencha seus dados para que a gente possa entrar em contato.</p>
          </div>
          <div className={styles.formContent}>
-            <form>
+            <form onSubmit={ handleOnInput } >
             <label htmlFor="nome">Nome Completo 
                <Input
                   type= "text" 
@@ -56,14 +70,13 @@ export function Contacts() {
                   aria-label="Telefone" 
                />
             </label>
+               <Button
+                  type="submit"
+                  aria-label="peça uma reunião"                                             
+                  text={"Peça uma reunião"}          
+               >
+               </Button>     
             </form>
-            <Button
-               type="button"
-               aria-label="peça uma reunião"               
-               onClick={ handleOnInput }                             
-               text={"Peça uma reunião"}          
-            >
-            </Button>     
          </div>
       </section>
    );

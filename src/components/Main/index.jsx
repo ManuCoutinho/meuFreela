@@ -1,5 +1,4 @@
 import { Button } from '../Button';
-import { Contacts } from '../Contacts';
 import styles from './styles.module.scss';
 
 
@@ -13,14 +12,15 @@ export function Main() {
         <h1>
         Seu projeto pronto <br/>na velocidade da luz
         </h1>
-        <Button
-          type="button"
-          aria-label="peça uma reunião"
-          href={Contacts}
-          text="Peça uma reunião"
-        >
-          Peça uma reunião          
-        </Button>         
+        <a href="#contacts-section">
+            <Button
+               type="button"
+               aria-label="peça uma reunião"          
+               text="Peça uma reunião"
+            >
+               Peça uma reunião          
+            </Button>
+        </a>
       </section>
     </main>
   );
