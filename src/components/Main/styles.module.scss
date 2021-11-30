@@ -1,0 +1,43 @@
+@import "../../styles/base/variables";
+@import "../../styles/base/componets";
+
+.mainContainer {
+  background: linear-gradient(rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 100%),
+    url(#{$path}/imgMainBanner.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh - $overlay);
+  width: 100%;
+}
+
+.mainSection {
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-left: 3.7rem;
+  padding-top: calc(18.25rem + $overlay);
+
+   h1 {
+      font-size: 5rem;
+      line-height: 5.85rem;
+      margin-bottom: 2.5rem;
+   }
+
+   p {
+      font-size: 1.87rem;
+      line-height: 2.19rem;
+   }
+
+   button {
+      @include buttonDefault (var(--red-200), var(--white)); 
+         &:hover {
+            background: transparent;
+            border: 4px solid var(--red-200);
+            box-shadow: 2px 3px 15px 0px var(--red-300);
+            color: var(--white);
+            font-weight: bold;
+         }               
+   }
+      
+   }

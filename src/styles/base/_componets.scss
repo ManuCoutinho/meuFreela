@@ -1,0 +1,28 @@
+@import "../../styles/base/variables";
+
+@mixin buttonDefault ($color1, $color2){   
+      background: $color1;  
+      border: 0;
+      border-radius: $radius;
+      color: $color2;
+      font-size: 1.375rem;
+      padding: 1rem 3.25rem;
+      transition: 0.2s;
+      width: 18.12rem;      
+}
+
+@mixin inputDefault ($color1, $color2, $margin, $color3 ) {
+   background: $color1;
+   border: 1px solid $color2;
+   border-radius: $radius;
+   height: 3.75rem;
+   margin-right: $margin;   
+   width: 21.125rem;
+
+      &::placeholder{
+         color: $color3;
+         font-size:1.125rem;
+         line-height: 1.875rem;
+         padding: 0.9375rem;
+      }
+}

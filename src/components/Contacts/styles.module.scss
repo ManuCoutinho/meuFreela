@@ -1,0 +1,71 @@
+@import "../../styles/base/componets";
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 4.4375rem 0;
+
+  h2 {
+    font-size: 3.125rem;
+    font-weight: 3.66rem;
+    margin-bottom: 1.3125rem;
+  }
+
+  p {
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+    margin-bottom: 2.3125rem;
+  }
+}
+
+.formContent {
+  display: flex;
+  align-items: center;  
+  
+
+   button {
+      @include buttonDefault(var(--green-300), var(--white));
+         margin-bottom: -1rem;
+         overflow: hidden;
+            &:hover {
+               filter: brightness(0.9);
+               border: 1px solid var(--gray-900);
+            }
+      }
+        
+  form {
+   display: flex;
+   
+    label {
+      color: var(--gray-600);
+      display: flex;
+      flex-direction: column;
+      font-size: 0.875rem;
+      font-weight: 700;     
+    }
+
+    input[type="text"] {
+      @include inputDefault(
+        var(--white),
+        var(--gray-250),        
+        1.375rem,
+        var(--gray-270)
+      );
+         &:invalid:focus {
+            border: 1px solid var(--red-200);
+         }
+    }
+
+    input[type="tel"] {
+      @include inputDefault(
+        var(--white),
+        var(--gray-250),       
+        1.375rem,
+        var(--gray-270)
+      );
+         &:invalid:focus {
+            border: 1px solid var(--red-200);
+         }
+    }     
+  }
+}
