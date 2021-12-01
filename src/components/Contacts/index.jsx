@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { api } from '../../services/api';
 import { toast } from 'react-toastify';
 import { Button } from '../Button';
@@ -7,16 +7,29 @@ import styles from './styles.module.scss';
 
 
 export function Contacts() {
-   useEffect(() => {
-      api.get('form').then(response => console.log(response.data))
-   }, [])
-
    const[valueName, setValueName] = useState("");
-   const[valueTel, setValueTel] = useState("");   
-   function handleOnInput(e) { 
+   const[valueTel, setValueTel] = useState("");    
+   const id = Math.floor(Math.random()*100); 
+
+   useEffect(()=> {
+
+   }, [])
+   
+   async function createdDataForm(){
+      const data = {
+         id: id,
+         fullName: valueName,
+         phone: valueTel,
+         createdAt: new Date(),
+      }         
+      const response = await api.post('/form', data) 
+      //const {} = response.data;   
+   }
+
+  function handleOnInput(e) { 
      e.preventDefault();
-      if (valueName !== "" && valueTel !== "" && valueTel.length >= 11) {         
-         //console.log({valueTel, valueName})
+      if (valueName !== "" && valueTel !== "" && valueTel.length >= 11) { 
+         createdDataForm()        
          toast.success("Aguarde nosso contato!", {
             position: "bottom-right",
             autoClose: 4000,
@@ -27,6 +40,8 @@ export function Contacts() {
             progress: undefined,
             theme: "colored",            
          });
+         setValueName('')
+         setValueTel('')
       } else {
          toast.error ("Preencha todos os campos", {
             position: "bottom-right",
@@ -40,7 +55,7 @@ export function Contacts() {
          });
       }
    }
-  
+   
    return (
       <section className={styles.container} id="contacts-section"> 
          <div>
