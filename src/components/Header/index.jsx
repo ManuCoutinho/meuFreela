@@ -15,16 +15,25 @@ export function Header() {
          </a>
        </div>
         <div className={styles.media}>
-            <a href={linkedin} target="_blank" 
-              aria-label="Link para o Linkedin">
+            <a href={linkedin} 
+               target="_blank" 
+               aria-label="Link para o Linkedin"
+               rel="noopener"
+               rel="noreferrer">
               <FaLinkedinIn/>
             </a>
-            <a href={instagram} target="_blank" 
-              aria-label="Link para o Instagram"> 
+            <a href={instagram} 
+               target="_blank" 
+               aria-label="Link para o Instagram"
+               rel="noopener"
+               rel="noreferrer"> 
               <FaInstagram/>              
             </a>
-            <a href={twitter}  target="_blank" 
-              aria-label="Link para o Twitter">
+            <a href={twitter}  
+               target="_blank" 
+               aria-label="Link para o Twitter"
+               rel="noopener"
+               rel="noreferrer">
               <FaTwitter/>
             </a>
         </div>

@@ -52,7 +52,7 @@ export function Contacts() {
             <label htmlFor="nome">Nome Completo 
                <Input
                   type= "text" 
-                  placeholder="Ex: Mateus Ávila Isidoro"
+                  placeholder="Ex: Maria Carolina de Jesus"
                   value={valueName}
                   onChange={(e) => setValueName(e.target.value)}               
                   name= "nome"              

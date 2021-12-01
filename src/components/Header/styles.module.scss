@@ -4,7 +4,7 @@ $green-300: #10AC84;
   background: linear-gradient(180deg, var(--red-200) 0%, var(--red-300) 100%);
   color: var(--white); 
   padding: 1.5rem 1.68rem;
-  width: 100%;  
+  width: 100vw;  
 
     nav {
       align-items: center;
@@ -25,9 +25,9 @@ $green-300: #10AC84;
   transition:transform 0.2s; 
 
   svg {    
-    height:32px;    
+    height:2rem;    
     margin-left: 1.25rem;
-    width: 32px;
+    width: 2rem;
 
       &:hover{
         transform: scale(1.3);        

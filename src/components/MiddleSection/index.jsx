@@ -18,9 +18,7 @@ export function MiddleSection() {
             loading="lazy-load"
             />
          </div>
-      </div>
-         <div className={styles.clipMiddle}>        
-         </div>
+      </div>        
     </section>     
   );
 }

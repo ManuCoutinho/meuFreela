@@ -1,13 +1,35 @@
 @import "../../styles/base/variables";
 @import "../../styles/base/componets";
 
+:root{
+   @media(max-width:768px){
+      .mainContainer{
+         background-size:cover;
+      }
+
+      .mainSection {
+         padding-top: calc(10rem - 5vh);
+         h1 {
+            font-size:min(5rem, 12vw);
+            line-height: inherit;
+         }
+      }
+   }
+
+   @media(max-width:425px){
+      .mainSection {
+         padding-left: 1.25rem;
+      }
+   }
+}
+
 .mainContainer {
   background: linear-gradient(rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 100%),
-    url(#{$path}/imgMainBanner.svg);
+    url(#{$path}/imgMainBanner.svg) center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;
   height: calc(100vh - $overlay);
-  width: 100%;
+  width: 100vw;
 }
 
 .mainSection {
@@ -38,6 +60,5 @@
             color: var(--white);
             font-weight: bold;
          }               
-   }
-      
-   }
+   }      
+}

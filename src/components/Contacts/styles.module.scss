@@ -1,7 +1,44 @@
 @import "../../styles/base/componets";
 
+:root {
+   @media(max-width:1024px) {
+   .container {
+      width: 100vw;
+      padding: 4.4375rem 1.5rem;          
+   }
+ }
+
+ @media(max-width:770px) {
+   .container {
+      width: 100vw;
+      padding: 4.4375rem 1rem;          
+   }
+
+   .formContent{
+      form {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+
+            input {
+               margin-bottom: 1rem;
+               margin-right: 0;
+            }
+
+            label {
+               line-height: 1.5rem;
+            }
+            
+            button{
+               align-self: center; 
+            }
+      }
+   }
+ }
+}
+
 .container {
-  width: 80%;
+  width: 80vw;
   margin: 0 auto;
   padding: 4.4375rem 0;
 
@@ -27,8 +64,7 @@
 
    button {
       @include buttonDefault(var(--green-300), var(--white));
-         margin-bottom: -1rem;
-         overflow: hidden;
+         align-self: flex-end;    
             &:hover {
                filter: brightness(0.9);
                border: 1px solid var(--gray-900);
@@ -43,28 +79,14 @@
       font-weight: 700;     
     }
 
-    input[type="text"] {
+    input {
       @include inputDefault(
         var(--white),
         var(--gray-250),        
         1.375rem,
         var(--gray-270)
-      );
-         &:invalid:focus {
-            border: 1px solid var(--red-200);
-         }
+      );        
     }
-
-    input[type="tel"] {
-      @include inputDefault(
-        var(--white),
-        var(--gray-250),       
-        1.375rem,
-        var(--gray-270)
-      );
-         &:invalid:focus {
-            border: 1px solid var(--red-200);
-         }
-    }     
+      
   }
 }
