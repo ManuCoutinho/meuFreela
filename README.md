@@ -16,14 +16,18 @@
 <br/>
 
 ## 💻 Sobre o projeto
-#
+
 
 Projeto proposto em forma de _challenge_ pela Comunidade Dev Hall, com o intuito de desenvolver e fortalecer habilidades necessárias ao desenvolvimento front-end. O protótipo do projeto pode ser encontrado aqui [🔗](https://github.com/mateusavila/dev-hall-front-end-1)
 
 <br/>
 
-## ⌨️ Comandos:
-#
+# Uso
+Optei por utilizar o template React para Vite.js para otimizar o build da aplicação. Portanto, requer a instalação prévia do Node.Js e a execução do comando:
+`yarn init` ou `npm install`
+
+### ⌨️ Comandos:
+
 * `dev`: roda sua aplicação na porta `localhost:3000`
 * `build`: cria a versão de _build_ para produção
 * `serve`: inicia um simples servidor com a versão compilada do código
@@ -31,15 +35,15 @@ Projeto proposto em forma de _challenge_ pela Comunidade Dev Hall, com o intuito
 <br/>
 
 ## 🔨 Tecnologias:
-#
+
 * Aplicação desenvolvida no template __React__ do [_Vite.js_](https://vitejs.dev/)
 * Estilização com [_Sass_](https://sass-lang.com/) em módulos para aplicação de _CSS escoped_
 * Libs:
    * [React Icons](https://react-icons.github.io/react-icons/)
    * [Toastify](https://fkhadra.github.io/react-toastify/introduction)
 * Fonte: Roboto by [_Google Fonts_](https://fonts.google.com/)
-* Animações com _CSS3_ 🎞️
 * Interface adaptada para dispositivos mobile 📱
+* Dados do Form persistidos com [mirageJs](https://miragejs.com/) e [axios](https://github.com/axios/axios)
 
 <br/>
 <br/>
