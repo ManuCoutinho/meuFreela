@@ -5,19 +5,12 @@
    @media(max-width:768px){
       .mainContainer{
          background-size:cover;
-      }
-
-      .mainSection {
-         padding-top: calc(10rem - 5vh);
-         h1 {
-            font-size:min(5rem, 12vw);
-            line-height: inherit;
-         }
-      }
+      }     
    }
 
    @media(max-width:425px){
       .mainSection {
+         padding-top: min(18.25rem, 10vh);
          padding-left: 1.25rem;
          padding-right: 1.25rem;
       }
@@ -37,14 +30,15 @@
   color: var(--white);
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   margin: 0 auto;
   padding-left: 3.7rem;
-  padding-top: min(calc(18.25rem + $overlay), 15vw);
+  padding-top: max(18.25rem, 10vh);
 
    h1 {
-      font-size: 5rem;
-      line-height: 5.85rem;
-      margin-bottom: 2.5rem;
+       font-size:min(5rem, 10vw);
+       line-height: inherit;
+       margin-bottom: 2.5rem;
    }
 
    p {

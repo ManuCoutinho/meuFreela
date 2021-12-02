@@ -9,6 +9,7 @@ $green-300: #10AC84;
     nav {
       align-items: center;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
     }
 }
