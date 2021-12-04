@@ -1,18 +1,17 @@
 @import "../../styles/base/variables";
 @import "../../styles/base/componets";
 
-:root{
-   @media(max-width:768px){
-      .mainContainer{
-         background-size:cover;
-      }     
-   }
+:root{  
 
-   @media(max-width:1400px){
+   @media(max-width:1080px){
       .mainSection {
          padding-top: min(18.25rem, 10vh);
          padding-left: 1.25rem;
          padding-right: 1.25rem;
+      }
+      button{
+         font-size: 1rem;
+         padding: 1rem 2.25rem;
       }
    }
 }
