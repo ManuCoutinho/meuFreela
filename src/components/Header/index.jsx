@@ -9,10 +9,8 @@ export function Header() {
   return(
     <header className={styles.headerContainer}>
       <nav>
-       <div className={styles.title}>
-         <a href="#">
-           <span>MeuFreela</span>
-         </a>
+       <div className={styles.title}>         
+           <span>MeuFreela</span>         
        </div>
         <div className={styles.media}>
             <a href={linkedin} 
