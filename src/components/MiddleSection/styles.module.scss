@@ -1,93 +1,79 @@
-:root{
-   @media(max-width: 768px) {
-      .containerGrid {          
-         width: 100vw;
-         column-gap: 1.5rem; 
-       }
+:root {
+  @media (max-width: 768px) {
+    .containerGrid {
+      width: 100vw;
+      column-gap: 1.5rem;
+    }
+   
+    .contentMiddle {
+      margin: 0;
+      padding: 1.25rem;
+    }
+  }
 
-      .imgMiddle {
-         margin: 0;        
-      
-         img {            
-            width: auto;
-            height: auto;
-         }
-      }
-      .contentMiddle{
-         margin: 0;
-         padding:1.25rem;
-      }
-   }
-
-   @media(max-width: 670px) {
-      .containerSection::after,
-      .imgMiddle {
-         display: none;
-      }
-      .containerSection{
-         padding: 3rem 0;
-         background: var(--gray-150);
-      }
-      .containerGrid {
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         align-items: center;
-         padding: 1rem;
-      }
-     
-   }
-
+  @media (max-width: 670px) {
+    .containerSection::after {
+      padding-bottom: 1rem;
+    }
+    .containerSection {
+      padding: 3rem 0;
+      background: var(--gray-150);
+    }
+    .containerGrid {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+  }
 }
 
-.containerSection{
-   position: relative;
-   width: 100%;
-      &::after {
-         content: "";  
-         background-color: var(--gray-150);
-         clip-path: polygon(0 46%, 100% 0%, 100% 100%, 0% 100%);
-         height: 120px;
-         bottom: 0;
-         left: 0;
-         right: 0;
-         position: absolute;
-         width: inherit;
-       }
+.containerSection {
+  position: relative;
+  width:100vw;
+  &::before {
+    content: "";
+    background-color: var(--gray-150);
+    clip-path: polygon(0 46%, 100% 0%, 100% 100%, 0% 100%);
+    height: 120px;
+    bottom: 0;    
+    position: absolute;
+    width: inherit;    
+  }
 }
 
 .containerGrid {
-  column-gap: 3rem;  
+  column-gap: 3rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 0 auto;  
-  width: 80vw;
+  margin: 0 auto;
+  width: 80vw;  
 }
 
 .contentMiddle {
   padding-top: 5.37rem;
-  margin: 0 auto;
+  margin: 0 auto;  
 
-   h2 {
-      font-size: 3.125rem;
-      line-height: 3.661875rem;
-      margin-bottom: 2.5625rem;
-   }
+  h2 {
+    font-size: 3.125rem;
+    line-height: 3.661875rem;
+    margin-bottom: 2.5625rem;
+  }
 
-   p {
-      font-size: 1.375rem;
-      line-height: 1.875rem;
-      text-align: justify;
-   }
+  p {
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+    padding-bottom: 1.5rem;
+  }
 }
 
 .imgMiddle {
-   padding-top: 2.56rem;
-   margin: 0 auto;
-
-   img {
-      min-width: 408px;
-      width: 100%;
-   }
+  padding-top: 2.56rem;
+  margin: 0 auto;  
+  
+  picture, img {
+    max-width: 100%;
+    height: auto;    
+  }
 }
-

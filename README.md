@@ -43,7 +43,7 @@ Optei por utilizar o template React para Vite.js para otimizar o build da aplica
    * [Toastify](https://fkhadra.github.io/react-toastify/introduction)
 * Fonte: Roboto by [_Google Fonts_](https://fonts.google.com/)
 * Interface adaptada para dispositivos mobile 📱
-* Dados do Form persistidos com [mirageJs](https://miragejs.com/) e [axios](https://github.com/axios/axios)
+
 
 <br/>
 <br/>
