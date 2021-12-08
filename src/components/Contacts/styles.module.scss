@@ -4,7 +4,7 @@
   @media (max-width: 1024px) {
     .container {
       width: 100vw;
-      padding: 4.4375rem 1.5rem;
+      padding: 4.43rem 1.5rem;
 
       h2,
       p {
@@ -30,7 +30,7 @@
             var(--gray-270),
             80vw
           );
-          margin-bottom: 1rem;
+          margin-bottom: 1.5rem;
           margin-right: 0;
         }
 
@@ -100,6 +100,12 @@
         var(--gray-270),
         21.125rem
       );
+      margin-top: 0.5rem;
+      &:focus {
+        outline: 1px solid var(--green-300);
+        -webkit-box-shadow: 1px 1px 10px 0px #10ac84;
+        box-shadow: 1px 1px 10px 0px #10ac84;
+      }
     }
   }
 }

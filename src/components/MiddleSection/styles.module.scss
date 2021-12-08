@@ -27,6 +27,27 @@
       padding: 1rem;
     }
   }
+
+  @media(max-width: 920px) and (min-width:769px){
+    .containerSection {
+      padding-bottom: 3rem;
+    }
+    .imgMiddle {
+      padding-top: 3rem;
+    }
+
+    .contentMiddle {    
+      h2 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        margin-bottom: 1.5rem;
+      }
+    
+      p {           
+        padding-bottom: 3.5rem;
+      }
+    }
+  }
 }
 
 .containerSection {
@@ -39,7 +60,7 @@
     height: 120px;
     bottom: 0;    
     position: absolute;
-    width: inherit;    
+    width: inherit;       
   }
 }
 
@@ -56,14 +77,14 @@
   margin: 0 auto;  
 
   h2 {
-    font-size: 3.125rem;
-    line-height: 3.661875rem;
-    margin-bottom: 2.5625rem;
+    font-size: 3.12rem;
+    line-height: 3.66rem;
+    margin-bottom: 2.56rem;
   }
 
   p {
-    font-size: 1.375rem;
-    line-height: 1.875rem;
+    font-size: 1.37rem;
+    line-height: 1.87rem;
     padding-bottom: 1.5rem;
   }
 }
