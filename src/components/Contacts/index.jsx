@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { toast } from "react-toastify";
 import { Button } from "../Button";
 import { Input } from "../Input";
@@ -10,7 +10,7 @@ export function Contacts() {
 
   function handleOnInput(e) {
     e.preventDefault();
-    if (valueName !== "" && valueTel !== "" && valueTel.length >= 11) {
+    if (!valueName !== "" && valueTel !== "" && valueTel.length >= 11) {
       toast.success("Aguarde nosso contato!", {
         position: "bottom-right",
         autoClose: 4000,
@@ -72,7 +72,8 @@ export function Contacts() {
             type="submit"
             aria-label="peça uma reunião"
             text={"Peça uma reunião"}
-          ></Button>
+          >            
+          </Button>
         </form>
       </div>
     </section>

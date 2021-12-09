@@ -1,29 +1,28 @@
 @import "../../styles/base/variables";
 @import "../../styles/base/componets";
+@import "../../styles/base/animations";
 
 :root {
   @media (max-width: 780px) {
     .mainContainer {
-      background: linear-gradient(
-          rgba(0, 0, 0, 0.75) 0%,
-          rgba(0, 0, 0, 0.75) 100%
-        ),
-        url(#{$path}/imgMainBanner.webp) center;
       justify-content: center;
       align-items: center;
       text-align: center;
-      width: 100vw;
     }
 
     .mainSection {
-      padding-left: 0;      
+      padding-left: 0;
       p {
-        padding: 0.5rem;
+        padding: 0 0.5rem;
+        font-size: 1.5rem;
+      }
+      h1 {
+        margin-top: 0.5rem;
       }
     }
   }
 
-  @media (max-width: 1080px) {
+  @media (max-width: 1360px) {
     .mainSection {
       padding-top: min(18.25rem, 10vh);
     }
@@ -48,23 +47,28 @@
   padding-left: 3.7rem;
   padding-top: max(18.25rem, 10vh);
   transition: filter 0.2s;
-  position: absolute;
 
   h1 {
     font-size: min(5rem, 10vw);
     line-height: inherit;
     margin-bottom: 2.5rem;
     display: block;
+    -webkit-animation: slideInBottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slideInBottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 
   p {
     font-size: 1.87rem;
     line-height: 2.19rem;
     display: block;
+    -webkit-animation: slideInTop 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slideInTop 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 
   button {
     @include buttonDefault(var(--red-200), var(--white));
+    -webkit-animation: slideInBottom 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slideInBottom 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     &:hover {
       background: var(--red-300);
       filter: brightness(0.9);
