@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 
 export function Main() {
   return (
-    <main className={styles.mainContainer}>
+    <main className={styles.mainContainer} loading="lazy">
       <section className={styles.mainSection}>
         <p>Desenvolvedores prontos para ação</p>
         <h1>

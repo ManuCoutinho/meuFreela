@@ -31,7 +31,7 @@
 
 .mainContainer {
   background: linear-gradient(rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 100%),
-    url(#{$path}/imgMainBanner.jpg) center;
+    url(#{$path}/imgMainBanner.webp) center;
   background-repeat: no-repeat;
   background-size: cover;
   height: calc(100vh - $overlay);
