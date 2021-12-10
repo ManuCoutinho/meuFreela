@@ -12,13 +12,14 @@ $red-200: #ee5253;
   background: linear-gradient(180deg, var(--red-200) 0%, var(--red-300) 100%);
   color: var(--white);
   width: 100vw;
-  padding: 1.5rem;
+  padding: 1.5rem;  
 
   nav {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-right: 1rem;
   }
 }
 

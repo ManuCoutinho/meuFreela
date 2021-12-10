@@ -76,9 +76,7 @@
 
 .contentMiddle {
   padding-top: 5.37rem;
-  margin: 0 auto;
-  -webkit-animation: slideInLeft 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slideInLeft 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  margin: 0 auto;  
 
   h2 {
     font-size: 3.12rem;
@@ -96,13 +94,9 @@
 .imgMiddle {
   padding-top: 2.56rem;
   margin: 0 auto;
-  -webkit-animation: scaleInVerBottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    both;
-  animation: scaleInVerBottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-
-  picture,
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+    picture,
+    img {
+      max-width: 100%;
+      height: auto;
+    }
 }

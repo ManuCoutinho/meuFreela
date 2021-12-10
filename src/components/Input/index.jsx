@@ -1,14 +1,17 @@
-export function Input({ type, placeholder, maxLength, name , onChange, ariaLabel, value}) {
+import InputMask from 'react-input-mask';
+
+export function Input({ type, placeholder, maxLength, name , onChange, ariaLabel, value, mask}) {
    return(
       <>         
-          <input 
+          <InputMask
               type={type}
               value={value} 
               placeholder={placeholder}
               maxLength={maxLength}
               name={name}
               onChange={onChange}
-              aria-label={ariaLabel}             
+              aria-label={ariaLabel}
+              mask={mask}            
           />
       </>
    );

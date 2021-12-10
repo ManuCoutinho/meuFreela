@@ -22,7 +22,7 @@
     }
   }
 
-  @media (max-width: 1360px) {
+  @media (max-width: 1399px) {
     .mainSection {
       padding-top: min(18.25rem, 10vh);
     }
@@ -61,14 +61,16 @@
     font-size: 1.87rem;
     line-height: 2.19rem;
     display: block;
-    -webkit-animation: slideInTop 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation: slideInTop 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    -webkit-animation: slideInTop 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slideInTop 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 
   button {
     @include buttonDefault(var(--red-200), var(--white));
-    -webkit-animation: slideInBottom 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: slideInBottom 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -webkit-animation: slideInBottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slideInBottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -webkit-box-shadow: 5px 2px 5px 2px rgba(0,0,0,0.9); 
+    box-shadow: 5px 2px 5px 2px rgba(0,0,0,0.9);
     &:hover {
       background: var(--red-300);
       filter: brightness(0.9);

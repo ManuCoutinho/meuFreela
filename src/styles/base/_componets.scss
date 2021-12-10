@@ -26,3 +26,18 @@
     line-height: 1.875rem;
   }
 }
+
+@mixin flex($justify) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+  flex-wrap: wrap;
+}
+
+@mixin flexDirection($justify, $direction, $wrap) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}

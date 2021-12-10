@@ -10,8 +10,8 @@ export function Contacts() {
 
   function handleOnInput(e) {
     e.preventDefault();
-    if (!valueName !== "" && valueTel !== "" && valueTel.length >= 11) {
-      toast.success("Aguarde nosso contato!", {
+    if (valueName !== "" && valueTel !== "" && valueTel.length >= 11) {
+      toast.success("Aguarde nosso contato! 👋🏽", {
         position: "bottom-right",
         autoClose: 4000,
         hideProgressBar: false,
@@ -24,7 +24,7 @@ export function Contacts() {
       setValueName("");
       setValueTel("");
     } else {
-      toast.error("Preencha todos os campos", {
+      toast.error("Preencha todos os campos 😅", {
         position: "bottom-right",
         autoClose: 4000,
         hideProgressBar: false,
@@ -53,7 +53,7 @@ export function Contacts() {
               value={valueName}
               onChange={(e) => setValueName(e.target.value)}
               name="name"
-              aria-label="Nome"
+              aria-label="Nome"              
             />
           </label>
           <label htmlFor="tel">
@@ -61,11 +61,12 @@ export function Contacts() {
             <Input
               type="tel"
               placeholder="(99) 99999-9999"
-              maxLength="11"
+              maxLength="16"
               onChange={(e) => setValueTel(e.target.value)}
               value={valueTel}
               name="telefone"
               aria-label="Telefone"
+              mask="(99) 99999-9999"
             />
           </label>
           <Button
