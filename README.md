@@ -41,6 +41,7 @@ Optei por utilizar o template React para Vite.js para otimizar o build da aplica
 * Libs:
    * [React Icons](https://react-icons.github.io/react-icons/)
    * [Toastify](https://fkhadra.github.io/react-toastify/introduction)
+   * [React Input Mask](https://www.npmjs.com/package/react-input-mask)
 * Fonte: Roboto by [_Google Fonts_](https://fonts.google.com/)
 * Interface adaptada para dispositivos mobile 📱
 
