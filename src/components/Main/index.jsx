@@ -1,7 +1,8 @@
 import { Button } from "../Button";
 import styles from "./styles.module.scss";
 
-export function Main() {
+
+export function Main() {  
   return (
     <main className={styles.mainContainer} loading="lazy">
       <section className={styles.mainSection}>

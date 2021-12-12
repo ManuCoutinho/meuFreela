@@ -17,14 +17,14 @@ export function MiddleSection() {
         </div>        
           <picture className={styles.imgMiddle}>
             <img
-              src={imgSecondary}
-              type="image/png"
+              src={imgSecondary2}
+              type="image/webp"
               loading="lazy"
               alt="imagem de um homem jovem negro pensando"
               width="408" height="466"
             />
-            <source srcSet={imgSecondary2}
-            type="image/webp" 
+            <source srcSet={imgSecondary}
+            type="image/png" 
             />
           </picture>
       </div>      

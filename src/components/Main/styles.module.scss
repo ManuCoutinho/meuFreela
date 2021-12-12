@@ -1,9 +1,9 @@
 @import "../../styles/base/variables";
-@import "../../styles/base/componets";
+@import "../../styles/base/mixins";
 @import "../../styles/base/animations";
 
 :root {
-  @media (max-width: 780px) {
+  @media (max-width:47.75em) {
     .mainContainer {
       justify-content: center;
       align-items: center;
@@ -30,8 +30,7 @@
 }
 
 .mainContainer {
-  background: linear-gradient(rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 100%),
-    url(#{$path}/imgMainBanner.webp) center;
+  @include bannerGradient(--black-075, --black-075, $path);
   background-repeat: no-repeat;
   background-size: cover;
   height: calc(100vh - $overlay);
@@ -39,38 +38,37 @@
 }
 
 .mainSection {
+  @include flexDirection(column, wrap);
   color: var(--white);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin: 0 auto;
+  margin: $marginDefault;
   padding-left: 3.7rem;
   padding-top: max(18.25rem, 10vh);
   transition: filter 0.2s;
 
   h1 {
-    font-size: min(5rem, 10vw);
+    font-size: min(5em, 10vw);
     line-height: inherit;
     margin-bottom: 2.5rem;
     display: block;
-    -webkit-animation: slideInBottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation: slideInBottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    -webkit-animation: slideInLeft 1s ease-in 0.6s both;
+    animation: slideInLeft 1s ease-in 0.6s both;
   }
 
   p {
-    font-size: 1.87rem;
+    font-size: 1.87em;
     line-height: 2.19rem;
     display: block;
-    -webkit-animation: slideInTop 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation: slideInTop 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    -webkit-animation: slideInTop 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.7s
+      both;
+    animation: slideInTop 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.7s both;
   }
 
   button {
     @include buttonDefault(var(--red-200), var(--white));
-    -webkit-animation: slideInBottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: slideInBottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    -webkit-box-shadow: 5px 2px 5px 2px rgba(0,0,0,0.9); 
-    box-shadow: 5px 2px 5px 2px rgba(0,0,0,0.9);
+    -webkit-animation: slideInBottom 1s ease 0.8s both;
+    animation: slideInBottom 1s ease 0.8s both;
+    -webkit-box-shadow: 5px 2px 5px 2px rgba(0, 0, 0, 0.9);
+    box-shadow: 5px 2px 5px 2px rgba(0, 0, 0, 0.9);
     &:hover {
       background: var(--red-300);
       filter: brightness(0.9);

@@ -1,7 +1,7 @@
-@import "../../styles/base/animations";
-
+@import "../../styles/base/variables";
+@import "../../styles/base/mixins";
 :root {
-  @media (max-width: 768px) {
+  @media (max-width: 48em) {
     .containerGrid {
       width: 100vw;
       column-gap: 1.5rem;
@@ -13,7 +13,7 @@
     }
   }
 
-  @media (max-width: 675px) {
+  @media (max-width: 47.812em) {
     .containerSection::after {
       padding-bottom: 1rem;
     }
@@ -22,15 +22,13 @@
       background: var(--gray-150);
     }
     .containerGrid {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      @include flex(center);
+      @include flexDirection(column, wrap);
       padding: 1rem;
     }
   }
 
-  @media (max-width: 920px) and (min-width: 769px) {
+  @media (max-width: 57.5em) and (min-width: 48.0625em) {
     .containerSection {
       padding-bottom: 3rem;
     }
@@ -40,7 +38,7 @@
 
     .contentMiddle {
       h2 {
-        font-size: 2.5rem;
+        font-size: 2.5em;
         line-height: 3rem;
         margin-bottom: 1.5rem;
       }
@@ -59,7 +57,7 @@
     content: "";
     background-color: var(--gray-150);
     clip-path: polygon(0 46%, 100% 0%, 100% 100%, 0% 100%);
-    height: 120px;
+    height: 7.5rem;
     bottom: 0;
     position: absolute;
     width: inherit;
@@ -70,22 +68,22 @@
   column-gap: 3rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 0 auto;
+  margin: $marginDefault;
   width: 80vw;
 }
 
 .contentMiddle {
   padding-top: 5.37rem;
-  margin: 0 auto;  
+  margin: $marginDefault;
 
   h2 {
-    font-size: 3.12rem;
+    font-size: 3.12em;
     line-height: 3.66rem;
     margin-bottom: 2.56rem;
   }
 
   p {
-    font-size: 1.37rem;
+    font-size: 1.37em;
     line-height: 1.87rem;
     padding-bottom: 1.5rem;
   }
@@ -93,10 +91,10 @@
 
 .imgMiddle {
   padding-top: 2.56rem;
-  margin: 0 auto;
-    picture,
-    img {
-      max-width: 100%;
-      height: auto;
-    }
+  margin: $marginDefault;
+  picture,
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }

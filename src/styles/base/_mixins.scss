@@ -1,11 +1,20 @@
 @import "../../styles/base/variables";
 
+@mixin headerGradient($color-1, $color-2) {
+  background: linear-gradient(180deg, var($color-1) 0%, var($color-2) 100%);
+}
+
+@mixin bannerGradient($color-1, $color-2, $path) {
+  background: linear-gradient(var($color-1) 0%, var($color-2) 100%),
+    url(#{$path}) center;
+}
+
 @mixin buttonDefault($color1, $color2) {
   background: $color1;
   border: 0;
   border-radius: $radius;
   color: $color2;
-  font-size: 1.375rem;
+  font-size: 1.375em;
   padding: 1rem 3.25rem;
   transition: 0.2s;
   width: 18.12rem;
@@ -22,8 +31,8 @@
 
   &::placeholder {
     color: $color3;
-    font-size: 1.125rem;
-    line-height: 1.875rem;
+    font-size: 1.125em;
+    line-height: 1.875em;
   }
 }
 
@@ -31,13 +40,18 @@
   display: flex;
   align-items: center;
   justify-content: $justify;
-  flex-wrap: wrap;
 }
 
-@mixin flexDirection($justify, $direction, $wrap) {
-  display: flex;
-  align-items: center;
-  justify-content: $justify;
+@mixin flexDirection($direction, $wrap) {
+  display: flex;  
   flex-direction: $direction;
   flex-wrap: $wrap;
 }
+
+@mixin customFlex($direction, $wrap) {
+  display: flex;
+  align-items: center;  
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+

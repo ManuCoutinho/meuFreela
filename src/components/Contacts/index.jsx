@@ -45,7 +45,7 @@ export function Contacts() {
       </div>
       <div className={styles.formContent}>
         <form onSubmit={handleOnInput} method="POST">
-          <label htmlFor="nome">
+          <label htmlFor="name">
             Nome Completo
             <Input
               type="text"
@@ -53,6 +53,7 @@ export function Contacts() {
               value={valueName}
               onChange={(e) => setValueName(e.target.value)}
               name="name"
+              id="name"
               aria-label="Nome"              
             />
           </label>
@@ -60,11 +61,11 @@ export function Contacts() {
             Whatsapp
             <Input
               type="tel"
-              placeholder="(99) 99999-9999"
-              maxLength="16"
+              placeholder="(99) 99999-9999"              
               onChange={(e) => setValueTel(e.target.value)}
               value={valueTel}
               name="telefone"
+              id="tel"
               aria-label="Telefone"
               mask="(99) 99999-9999"
             />
