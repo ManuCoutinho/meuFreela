@@ -15,10 +15,10 @@
   }
 
   @media (max-width: 61.81em) {
-    .formContent {
+    .formContent {      
+      @include flex(center);
       form {
         @include customFlex(column, wrap);
-        margin: marginDefault;
 
         input {
           @include inputDefault(
@@ -28,8 +28,7 @@
             var(--gray-270),
             80vw
           );
-          margin-bottom: 1.5rem;
-          margin-right: 0;
+          margin-bottom: 1.5rem;         
         }
 
         label {
