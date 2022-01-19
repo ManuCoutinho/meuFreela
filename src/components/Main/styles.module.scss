@@ -64,7 +64,7 @@
   }
 
   button {
-    @include buttonDefault(var(--red-200), var(--white));
+    @include buttonDefault();
     -webkit-animation: slideInBottom 1s ease 0.8s both;
     animation: slideInBottom 1s ease 0.8s both;
     -webkit-box-shadow: 5px 2px 5px 2px rgba(0, 0, 0, 0.9);

@@ -11,6 +11,7 @@
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" style="margin-right: 16px"/> 
 <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" style="margin-right: 16px"/> 
 <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" style="margin-right: 16px"/>
+<img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E">
 </div>
 <br/>
 <br/>
@@ -18,7 +19,7 @@
 ## 💻 Sobre o projeto
 
 
-Projeto proposto em forma de _challenge_ pela Comunidade Dev Hall, com o intuito de desenvolver e fortalecer habilidades necessárias ao desenvolvimento front-end. O protótipo do projeto pode ser encontrado aqui [🔗](https://github.com/mateusavila/dev-hall-front-end-1)
+Projeto proposto em forma de _challenge_ pela Comunidade, com o intuito de desenvolver e fortalecer habilidades necessárias ao desenvolvimento front-end. Inspirado no protótipo original, que pode ser encontrado aqui [🔗](https://github.com/mateusavila/dev-hall-front-end-1)
 
 <br/>
 
@@ -37,7 +38,7 @@ Optei por utilizar o template React para Vite.js para otimizar o build da aplica
 ## 🔨 Tecnologias:
 
 * Aplicação desenvolvida no template __React__ do [_Vite.js_](https://vitejs.dev/)
-* Estilização com [_Sass_](https://sass-lang.com/) em módulos para aplicação de _CSS escoped_
+* Estilização com [_Sass_](https://sass-lang.com/) em módulos para aplicação de _CSS scoped_
 * Libs:
    * [React Icons](https://react-icons.github.io/react-icons/)
    * [Toastify](https://fkhadra.github.io/react-toastify/introduction)

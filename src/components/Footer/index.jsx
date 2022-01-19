@@ -9,7 +9,7 @@ export function Footer() {
            rel="nofollow noopener"
            aria-label="Link Dev Hall"
            >
-           <span>DEV HALL</span>
+           <span>Pessoas de Tech</span>
            </a>
            </p>
       </footer>

@@ -10,7 +10,7 @@ export function Header() {
     <header className={styles.headerContainer}>
       <nav>
         <div className={styles.title}>
-          <span>MeuFreela</span>
+          <span role="logo">MeuFreela</span>
         </div>
         <div className={styles.media}>
           <a

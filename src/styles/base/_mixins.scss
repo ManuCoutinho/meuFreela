@@ -1,7 +1,7 @@
 @import "../../styles/base/variables";
 
-@mixin headerGradient($color-1, $color-2) {
-  background: linear-gradient(180deg, var($color-1) 0%, var($color-2) 100%);
+@mixin headerGradient($color-1, $color-2, $color-3, $color-4) {
+  background: linear-gradient(160deg, $color-1, $color-2, $color-3, $color-4);
 }
 
 @mixin bannerGradient($color-1, $color-2, $path) {
@@ -9,11 +9,11 @@
     url(#{$path}) center;
 }
 
-@mixin buttonDefault($color1, $color2) {
-  background: $color1;
+@mixin buttonDefault() {
+  background: var(--red-200);
   border: 0;
   border-radius: $radius;
-  color: $color2;
+  color: var(--white);
   font-size: 1.375em;
   padding: 1rem 3.25rem;
   transition: 0.2s;

@@ -10,10 +10,10 @@
   }
 }
 .headerContainer {
-  @include headerGradient(--red-200, --red-300);
+  @include headerGradient(#FCA311, #EC604F, #5C3365, #14213D);
   color: var(--white);
   width: 100vw;
-  padding: 1.5rem;
+  padding: 1.5rem;  
 
   nav {
     @include flex(space-between);
@@ -24,13 +24,15 @@
 
 .title {
   span {
+    color: var(--gray-900);
     font-size: 1.875em;
     font-weight: 700;
+    filter: drop-shadow(3px 5px 10px rgba(0, 0, 0, 0.7));
   }
 }
 
 .media {
-  transition: filter 0.2s;
+  transition: transform 0.2s;
 
   svg {
     height: 2rem;
@@ -38,10 +40,9 @@
     width: 1.85rem;
 
     &:hover {
-      color: $red-180;
-      filter: drop-shadow(-0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3));
+      color: $red-180;      
       transform: scale(1.05);
-      transition: filter 0.2s;
+      transition: all 0.2s;
     }
   }
 }
